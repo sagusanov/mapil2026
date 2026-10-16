@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Siswa - Digital Kreatif</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 font-sans text-slate-100 min-h-screen flex flex-col selection:bg-pink-500 selection:text-white">
+
+    <!-- Top Decorative Gradient Glow -->
+    <div class="absolute top-0 left-0 w-full h-96 gradient-bg opacity-25 blur-3xl pointer-events-none -z-10"></div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="dashboard.html" class="w-12 h-12 rounded-2xl gradient-bg flex items-center justify-center shadow-lg shadow-indigo-500/30 hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-palette text-white text-xl"></i>
+                </a>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                        Digital Kreatif <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-semibold">Siswa</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">Pusat Data Peserta Didik</p>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-2">
+                <a href="dashboard.html" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-house-chimney mr-2"></i>Dashboard
+                </a>
+                <a href="siswa.html" class="px-4 py-2 rounded-xl text-sm font-semibold bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 transition shadow-inner">
+                    <i class="fa-solid fa-user-graduate mr-2 text-emerald-400"></i>Data Siswa
+                </a>
+                <a href="nilai.html" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-chart-line mr-2 text-amber-400"></i>Nilai & Penilaian
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <div class="text-right hidden sm:block">
+                    <p class="text-sm font-bold text-white">Kelas XII</p>
+                    <p class="text-xs text-slate-400">Tahun Ajaran Aktif</p>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center font-bold text-white shadow-md">
+                    DK
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <!-- Page Header Card -->
+        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 p-8 shadow-2xl shadow-emerald-900/40">
+            <div class="absolute -right-8 -bottom-8 opacity-15 pointer-events-none text-9xl text-white">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="relative z-10 space-y-3">
+                <a href="dashboard.html" class="inline-flex items-center gap-2 text-xs font-semibold text-emerald-100 hover:text-white transition">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Dashboard
+                </a>
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Daftar Siswa Pilihan Digital Kreatif</h2>
+                <p class="text-emerald-100 text-sm max-w-2xl">
+                    Rekapitulasi data peserta didik dari berbagai rombel yang mengikuti Mata Pelajaran Pilihan Digital Kreatif.
+                </p>
+            </div>
+        </section>
+
+        <!-- Stats Overview -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+                <div>
+                    <p class="text-2xl font-black text-white" id="totalSiswa">17</p>
+                    <p class="text-xs text-slate-400">Total Murid</p>
+                </div>
+            </div>
+            <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <div>
+                    <p class="text-2xl font-black text-white">6</p>
+                    <p class="text-xs text-slate-400">Asal Rombel</p>
+                </div>
+            </div>
+            <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-venus"></i>
+                </div>
+                <div>
+                    <p class="text-2xl font-black text-white">8</p>
+                    <p class="text-xs text-slate-400">Siswa Putri</p>
+                </div>
+            </div>
+            <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-mars"></i>
+                </div>
+                <div>
+                    <p class="text-2xl font-black text-white">9</p>
+                    <p class="text-xs text-slate-400">Siswa Putra</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="bg-slate-800/70 border border-slate-700/80 rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
+            <div class="relative w-full sm:w-80">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Cari nama siswa..." class="w-full bg-slate-900 border border-slate-700 rounded-xl pl-11 pr-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition">
+            </div>
+            <div class="flex items-center space-x-3 w-full sm:w-auto">
+                <label for="rombelFilter" class="text-xs font-semibold text-slate-400 whitespace-nowrap"><i class="fa-solid fa-filter mr-1"></i> Rombel:</label>
+                <select id="rombelFilter" onchange="filterTable()" class="w-full sm:w-48 bg-slate-900 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-emerald-500 transition">
+                    <option value="">Semua Rombel</option>
+                    <option value="XII B">XII B</option>
+                    <option value="XII DKV">XII DKV</option>
+                    <option value="XII PPLG">XII PPLG</option>
+                    <option value="XII TK 3">XII TK 3</option>
+                    <option value="XII TO">XII TO</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Table Data Siswa -->
+        <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl overflow-hidden shadow-xl">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse" id="siswaTable">
+                    <thead>
+                        <tr class="bg-slate-900/80 border-b border-slate-700/80 text-xs uppercase tracking-wider text-slate-400">
+                            <th class="py-4 px-6 w-16 text-center">No</th>
+                            <th class="py-4 px-6">Nama Murid</th>
+                            <th class="py-4 px-6">Asal Rombel</th>
+                            <th class="py-4 px-6 text-center">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-700/50 text-sm font-medium">
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">1</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">AS</div>
+                                AULIYA SRI RAHAYU
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">XII B</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">2</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">DS</div>
+                                DEWI SAFIRA FEBRIANA
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">XII B</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">3</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">ID</div>
+                                INTAN DWI LESTARI
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">XII B</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">4</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">KN</div>
+                                KHOIRUN NISA
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">XII B</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">5</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">KR</div>
+                                KIRANIA RAMADHANI SULTAN
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">XII B</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">6</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">BA</div>
+                                BINTA AINIL MAHMUDAH
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30">XII DKV</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">7</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">ER</div>
+                                ELY RIZKIYAH
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30">XII DKV</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">8</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">EP</div>
+                                ERIZKA PUTRI AMELIA
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30">XII DKV</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">9</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">MA</div>
+                                MOCHAMMAD AKHDAN RAFA
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">XII PPLG</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">10</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">MF</div>
+                                MOCHAMMAD FRISKY MAYDIKA SOLEH
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">XII PPLG</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">11</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">MF</div>
+                                MOHAMMAD FACHDIRAL LAZUARDY
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">XII PPLG</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">12</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">KD</div>
+                                KEYDAFFA ORIZKY JOVAN
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">XII TK 3</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">13</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">FM</div>
+                                FAJAR MAULANA MACHMUB
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30">XII TO</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">14</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">MA</div>
+                                MOKHAMMAD ANGGA SUPRIANTO
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30">XII TO</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">15</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">MS</div>
+                                M. SOLAHUDDIN
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30">XII TO</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">16</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">MM</div>
+                                MOCHAMMAD MARVIN ALFIANSYAH
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30">XII TO</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 transition">
+                            <td class="py-4 px-6 text-center text-slate-400 font-bold">17</td>
+                            <td class="py-4 px-6 font-semibold text-white flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">MI</div>
+                                MUHAMMAD IRWANSYAH
+                            </td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30">XII TO</span></td>
+                            <td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aktif</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center text-white font-bold text-xs">
+                    DK
+                </div>
+                <p class="text-xs text-slate-400">&copy; 2026 Mata Pelajaran Pilihan Digital Kreatif. All rights reserved.</p>
+            </div>
+            <div class="flex items-center space-x-6 text-xs text-slate-400">
+                <a href="dashboard.html" class="hover:text-white transition">Dashboard</a>
+                <a href="siswa.html" class="hover:text-white transition">Siswa</a>
+                <a href="nilai.html" class="hover:text-white transition">Nilai</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Filter Script -->
+    <script>
+        function filterTable() {
+            const searchValue = document.getElementById('searchInput').value.toLowerCase();
+            const rombelValue = document.getElementById('rombelFilter').value.toLowerCase();
+            const table = document.getElementById('siswaTable');
+            const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const nameCell = rows[i].getElementsByTagName('td')[1];
+                const rombelCell = rows[i].getElementsByTagName('td')[2];
+
+                if (nameCell && rombelCell) {
+                    const nameText = nameCell.textContent || nameCell.innerText;
+                    const rombelText = rombelCell.textContent || rombelCell.innerText;
+
+                    const matchesSearch = nameText.toLowerCase().includes(searchValue);
+                    const matchesRombel = rombelValue === "" || rombelText.toLowerCase().includes(rombelValue);
+
+                    if (matchesSearch && matchesRombel) {
+                        rows[i].style.display = "";
+                    } else {
+                        rows[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
