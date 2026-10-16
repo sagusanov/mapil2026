@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk 02: Modul Preset Aesthetic Lightroom - Digital Kreatif</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+        }
+        .lightroom-badge {
+            background: linear-gradient(135deg, #31a8ff 0%, #0055b8 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 font-sans text-slate-100 min-h-screen flex flex-col selection:bg-pink-500 selection:text-white">
+
+    <!-- Top Decorative Gradient Glow -->
+    <div class="absolute top-0 left-0 w-full h-96 gradient-bg opacity-25 blur-3xl pointer-events-none -z-10"></div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="dashboard.html" class="w-12 h-12 rounded-2xl gradient-bg flex items-center justify-center shadow-lg shadow-indigo-500/30 hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-palette text-white text-xl"></i>
+                </a>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                        Digital Kreatif <span class="text-xs px-2.5 py-1 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-semibold">Produk 02</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">Modul Praktik Siswa: Preset Aesthetic Adobe Lightroom</p>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-2">
+                <a href="dashboard.html" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-house-chimney mr-2"></i>Dashboard
+                </a>
+                <a href="siswa.html" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-user-graduate mr-2 text-emerald-400"></i>Data Siswa
+                </a>
+                <a href="nilai.html" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-chart-line mr-2 text-amber-400"></i>Nilai & Penilaian
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <div class="text-right hidden sm:block">
+                    <p class="text-sm font-bold text-white">Kelas XII</p>
+                    <p class="text-xs text-slate-400">Tahun Ajaran Aktif</p>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-bold text-white shadow-md">
+                    DK
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+        <!-- Breadcrumb -->
+        <nav class="flex items-center space-x-2 text-xs text-slate-400">
+            <a href="dashboard.html" class="hover:text-white transition">Dashboard</a>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            <span class="text-slate-200">Produk 02</span>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            <span class="text-cyan-400 font-semibold">Preset Aesthetic Adobe Lightroom</span>
+        </nav>
+
+        <!-- BANNER MODUL UTAMA -->
+        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 p-8 shadow-2xl shadow-blue-900/40">
+            <div class="absolute -right-8 -bottom-8 opacity-15 pointer-events-none text-9xl text-white">
+                <i class="fa-solid fa-sliders"></i>
+            </div>
+            <div class="relative z-10 space-y-3 max-w-3xl">
+                <div class="flex items-center gap-2">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white backdrop-blur-md">
+                        <i class="fa-solid fa-camera-retro mr-1"></i> Modul Praktik Fotografi & Retouch
+                    </span>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold lightroom-badge text-white shadow">
+                        Adobe Lightroom Mobile & PC
+                    </span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                    Pengembangan & Produksi Preset Aesthetic Adobe Lightroom (.DNG & .XMP)
+                </h2>
+                <p class="text-sky-100 text-sm leading-relaxed">
+                    Preset Aesthetic adalah racikan pengaturan warna, pencahayaan, kontras, dan tekstur instan. Pelajari teknik color grading profesional menggunakan Adobe Lightroom untuk menciptakan produk digital yang bernilai jual tinggi.
+                </p>
+            </div>
+        </section>
+
+        <!-- PENGERTIAN & KOMPONEN UTAMA PRESET -->
+        <section class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+            <div class="border-b border-slate-700 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h3 class="text-2xl font-black text-white flex items-center gap-3">
+                    <span class="w-3.5 h-3.5 rounded-full bg-cyan-400 inline-block"></span>
+                    Pengertian & Komponen Utama Preset
+                </h3>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-900 text-cyan-400 border border-slate-700">Dasar Color Grading</span>
+            </div>
+
+            <p class="text-slate-300 text-sm leading-relaxed">
+                <strong>Preset Aesthetic</strong> adalah serangkaian pengaturan (settingan) editan warna, pencahayaan, kontras, dan tekstur yang telah disimpan sebelumnya (pre-set) agar dapat diterapkan ke foto lain secara instan dalam satu kali klik. Tujuan utamanya adalah menciptakan nuansa (vibe), suasana, atau gaya visual yang konsisten tanpa perlu mengedit parameter dari awal satu per satu.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+                <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">Pencahayaan (Light)</h4>
+                    <p class="text-xs text-slate-400">Pengaturan Exposure, Kontras, Highlight, Shadow, Whites, Blacks, serta efek pudar (Faded/Matte).</p>
+                </div>
+
+                <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                    <div class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">Warna (Color & HSL)</h4>
+                    <p class="text-xs text-slate-400">Pengaturan Temperature, Saturation, dan pergeseran warna spesifik melalui HSL (Hue, Saturation, Luminance).</p>
+                </div>
+
+                <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">Kurva Nada (Tone Curve)</h4>
+                    <p class="text-xs text-slate-400">Membentuk karakter tone visual secara presisi pada RGB channel (seperti gaya kamera film retro/vintage).</p>
+                </div>
+
+                <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">Tekstur & Efek</h4>
+                    <p class="text-xs text-slate-400">Pengaturan kehalusan (Softness), Clarity, Dehaze, serta tekstur bintik bintik film (Film Grain).</p>
+                </div>
+            </div>
+
+            <!-- FORMAT FILE PRESET -->
+            <div class="bg-slate-900/90 border border-slate-700/80 rounded-2xl p-6 space-y-4">
+                <h4 class="font-bold text-white text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-file-export text-cyan-400"></i> Format File Preset Lightroom yang Umum Digunakan
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div class="bg-slate-800/70 p-4 rounded-xl border border-slate-700 space-y-1">
+                        <span class="font-extrabold text-cyan-400 text-sm">.DNG (Lightroom Mobile)</span>
+                        <p class="text-slate-300">Format foto RAW berserta metadata editan yang dapat dibuka langsung di aplikasi Adobe Lightroom Mobile (Android/iOS) versi gratis tanpa akun premium.</p>
+                    </div>
+                    <div class="bg-slate-800/70 p-4 rounded-xl border border-slate-700 space-y-1">
+                        <span class="font-extrabold text-blue-400 text-sm">.XMP / .LRTEMPLATE (Lightroom PC)</span>
+                        <p class="text-slate-300">Format berkas preset resmi untuk Adobe Lightroom Classic dan Lightroom CC di komputer (Windows/macOS) untuk workflow fotografi profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STUDI KASUS & RUMUS PRAKTIK: OCEAN TEAL & ORANGE -->
+        <section class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+            <div class="border-b border-slate-700 pb-4 flex items-center justify-between">
+                <div>
+                    <h3 class="text-2xl font-black text-white flex items-center gap-3">
+                        <span class="w-3.5 h-3.5 rounded-full bg-amber-400 inline-block"></span>
+                        Studi Kasus Racikan: "Ocean Teal & Orange"
+                    </h3>
+                    <p class="text-xs text-slate-400 mt-1">Konsep sinematik klasik Hollywood yang mengontraskan warna biru laut dengan warna kulit hangat</p>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">Rumus Lightroom</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <!-- Step 1: Light & Basic -->
+                <div class="bg-slate-900/90 border border-slate-700 p-5 rounded-2xl space-y-3">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                        <h4 class="font-bold text-white text-sm"><i class="fa-solid fa-sun text-amber-400 mr-2"></i>1. Modul Pencahayaan (Light)</h4>
+                    </div>
+                    <div class="space-y-2 text-xs font-mono">
+                        <div class="flex justify-between py-1 border-b border-slate-800">
+                            <span class="text-slate-400">Exposure</span>
+                            <span class="text-white font-bold">+0.20</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-800">
+                            <span class="text-slate-400">Contrast</span>
+                            <span class="text-white font-bold">+15</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-800">
+                            <span class="text-slate-400">Highlights</span>
+                            <span class="text-white font-bold">-35</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-800">
+                            <span class="text-slate-400">Shadows</span>
+                            <span class="text-white font-bold">+25</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-800">
+                            <span class="text-slate-400">Whites</span>
+                            <span class="text-white font-bold">-10</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-800">
+                            <span class="text-slate-400">Blacks</span>
+                            <span class="text-white font-bold">+10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: HSL Color Mixer -->
+                <div class="bg-slate-900/90 border border-slate-700 p-5 rounded-2xl space-y-3 lg:col-span-2">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                        <h4 class="font-bold text-white text-sm"><i class="fa-solid fa-sliders text-pink-400 mr-2"></i>2. HSL Color Mixer (Paling Krusial)</h4>
+                        <span class="text-[10px] text-slate-400">Hue / Saturation / Luminance</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
+                        <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/60 space-y-1">
+                            <span class="text-orange-400 font-bold">Orange (Skin Tone / Kulit)</span>
+                            <p class="text-slate-300">Hue: -5 | Saturation: +15 | Luminance: +10</p>
+                        </div>
+                        <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/60 space-y-1">
+                            <span class="text-yellow-400 font-bold">Yellow (Daun / Pasir)</span>
+                            <p class="text-slate-300">Hue: -30 | Saturation: -25 | Luminance: +0</p>
+                        </div>
+                        <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/60 space-y-1">
+                            <span class="text-cyan-400 font-bold">Cyan (Teal Air / Langit)</span>
+                            <p class="text-slate-300">Hue: +35 | Saturation: +30 | Luminance: +5</p>
+                        </div>
+                        <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/60 space-y-1">
+                            <span class="text-blue-400 font-bold">Blue (Biru Laut)</span>
+                            <p class="text-slate-300">Hue: -20 | Saturation: +25 | Luminance: -10</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CARA MENYIMPAN & MENJUAL PRESET (.DNG & .XMP) -->
+        <section class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+            <div class="border-b border-slate-700 pb-4">
+                <h3 class="text-2xl font-black text-white flex items-center gap-3">
+                    <span class="w-3.5 h-3.5 rounded-full bg-emerald-400 inline-block"></span>
+                    Cara Ekspor & Menjual Preset (.DNG & .XMP)
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 1 -->
+                <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">1. Simpan Preset Internal</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Di Adobe Lightroom, klik ikon titik tiga di pojok kanan atas &gt; pilih <strong>Create Preset</strong>. Beri nama (misal: <em>Ocean Teal Cinematic</em>), centang parameter Light, Color, dan Effects, lalu simpan.
+                    </p>
+                </div>
+
+                <!-- 2 -->
+                <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">2. Ekspor Berkas .DNG / .XMP</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Untuk membagikan atau menjual: pilih foto yang sudah di-edit, klik Share &gt; <strong>Export as...</strong> &gt; pilih format <strong>DNG</strong> (Mobile) atau ekspor preset <strong>.XMP</strong> dari Lightroom Desktop.
+                    </p>
+                </div>
+
+                <!-- 3 -->
+                <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-shop"></i>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">3. Pengemasan & Penjualan</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Kemas berkas <code>.DNG</code> dan <code>.XMP</code> ke dalam berkas <code>.ZIP</code>. Sertakan file PDF panduan cara pakai, lalu unggah ke Shopee, Lynk.id, Karyakarsa, atau Gumroad.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KATALOG 10 IDE NAMA & KONSEP PRESET AESTHETIC (TUGAS SISWA) -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h3 class="text-2xl font-black text-white flex items-center gap-3">
+                        <span class="w-3.5 h-3.5 rounded-full bg-pink-500 inline-block"></span>
+                        10 Ide Nama & Konsep Preset Aesthetic (Tugas Siswa)
+                    </h3>
+                    <p class="text-xs text-slate-400 mt-1">Daftar pilihan tema acuan untuk pembuatan tugas paket preset masing-masing siswa</p>
+                </div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-pink-400 border border-slate-700">10 Paket Proyek</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <!-- 1 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 space-y-2 hover:border-amber-500/50 transition">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-bold text-white text-base">1. Warm Coffee / Cozy Vibe</h4>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">Cokelat & Warm</span>
+                    </div>
+                    <p class="text-xs text-slate-300"><strong>Konsep Warna:</strong> Didominasi warna cokelat hangat, oranye lembut, dan krem.</p>
+                    <p class="text-xs text-slate-400"><strong>Cocok Untuk:</strong> Cafe hopping, makanan, interior ruangan, dan kegiatan cozy saat hujan.</p>
+                    <p class="text-[11px] text-amber-400 font-semibold">Vibe: Tenang, nyaman, dan hangat.</p>
+                </div>
+
+                <!-- 2 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 space-y-2 hover:border-blue-500/50 transition">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-bold text-white text-base">2. Creamy Soft Milk</h4>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">Soft & Clean</span>
+                    </div>
+                    <p class="text-xs text-slate-300"><strong>Konsep Warna:</strong> Warna cerah dengan kontras rendah, bayangan mulus, dan dominasi putih susu (milky white).</p>
+                    <p class="text-xs text-slate-400"><strong>Cocok Untuk:</strong> Daily outfit (OOTD), selfie, katalog produk skincare, dan dekorasi minimalis.</p>
+                    <p class="text-[11px] text-blue-400 font-semibold">Vibe: Bersih, lembut, dan feminin.</p>
+                </div>
+
+                <!-- 3 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 space-y-2 hover:border-emerald-500/50 transition">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-bold text-white text-base">3. Dark Academia & Moody</h4>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Moody & Classic</span>
+                    </div>
+                    <p class="text-xs text-slate-300"><strong>Konsep Warna:</strong> Kontras tinggi, bayangan pekat, warna hijau tua (emerald), dan nuansa kayu gelap.</p>
+                    <p class="text-xs text-slate-400"><strong>Cocok Untuk:</strong> Konten malam hari, arsitektur klasik, perpustakaan, museum, dan gaya edgy.</p>
+                    <p class="text-[11px] text-emerald-400 font-semibold">Vibe: Misterius, elegan, dan mendalam.</p>
+                </div>
+
+                <!-- 4 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 space-y-2 hover:border-yellow-500/50 transition">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-bold text-white text-base">4. Vintage Film 90s</h4>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-yellow-500/20 text-yellow-300 border border-yellow-500/30">Analog Grain</span>
+                    </div>
+                    <p class="text-xs text-slate-300"><strong>Konsep Warna:</strong> Efek pudar (faded blacks), sedikit hangat (yellowish), dan bintik grain kamera analog 35mm.</p>
+                    <p class="text-xs text-slate-400"><strong>Cocok Untuk:</strong> Street style, foto liburan, kenangan kasual, dan vibes nostalgia.</p>
+                    <p class="text-[11px] text-yellow-400 font-semibold">Vibe: Retro, nostalgia, dan aesthetic.</p>
+                </div>
+
+                <!-- 5 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 space-y-2 hover:border-rose-500/50 transition">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-bold text-white text-base">5. Korean Clean Look</h4>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30">Bright & Rosy</span>
+                    </div>
+                    <p class="text-xs text-slate-300"><strong>Konsep Warna:</strong> Pencahayaan tinggi (high key), warna kulit bersih & kemerahan (rosy), tone alam natural.</p>
+                    <p class="text-xs text-slate-400"><strong>Cocok Untuk:</strong> Portret diri, riasan wajah (makeup), beauty vlog, dan konten lifestyle Korea.</p>
+                    <p class="text-[11px] text-rose-400 font-semibold">Vibe: Segar, alami, dan bercahaya (glowing).</p>
+                </div>
+
+                <!-- 6 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 space-y-2 hover:border-orange-500/50 transition">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-bold text-white text-base">6. Golden Hour Glow</h4>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30">Golden Sunset</span>
+                    </div>
+                    <p class="text-xs text-slate-300"><strong>Konsep Warna:</strong> Menonjolkan warna oranye emas, kuning keemasan, dan bayangan lembut sore hari.</p>
+                    <p class="text-xs text-slate-400"><strong>Cocok Untuk:</strong> Pemandangan alam, pantai, momen matahari terbit/terbenam, dan portret outdoor.</p>
+                    <p class="text-[11px] text-orange-400 font-semibold">Vibe: Romantis, magis, dan hangat.</p>
+                </div>
+
+                <!-- 7 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 space-y-2 hover:border-purple-500/50 transition">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-bold text-white text-base">7. City Night Cyberpunk</h4>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">Neon & Cyan</span>
+                    </div>
+                    <p class="text-xs text-slate-300"><strong>Konsep Warna:</strong> Kombinasi warna cyan (biru kehijauan) dan magenta/neon pink dengan bayangan malam kontras.</p>
+                    <p class="text-xs text-slate-400"><strong>Cocok Untuk:</strong> Suasana kota malam hari, lampu neon, kendaraan malam, dan lanskap perkotaan.</p>
+                    <p class="text-[11px] text-purple-400 font-semibold">Vibe: Futuristis, cool, dan penuh energi.</p>
+                </div>
+
+                <!-- 8 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 space-y-2 hover:border-emerald-500/50 transition">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-bold text-white text-base">8. Forest & Matcha Green</h4>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Deep Nature</span>
+                    </div>
+                    <p class="text-xs text-slate-300"><strong>Konsep Warna:</strong> Hijau tua teduh (desaturated green) dipadukan dengan aksen kayu dan warna alam.</p>
+                    <p class="text-xs text-slate-400"><strong>Cocok Untuk:</strong> Camping, mendaki gunung, taman kota, serta foto produk herbal / matcha.</p>
+                    <p class="text-[11px] text-emerald-400 font-semibold">Vibe: Asri, menenangkan, dan alami.</p>
+                </div>
+
+                <!-- 9 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 space-y-2 hover:border-cyan-500/50 transition">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-bold text-white text-base">9. Ocean Teal & Orange</h4>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Cinematic Film</span>
+                    </div>
+                    <p class="text-xs text-slate-300"><strong>Konsep Warna:</strong> Kontras sinematik Hollywood antara biru laut (teal) dengan warna kulit hangat (orange).</p>
+                    <p class="text-xs text-slate-400"><strong>Cocok Untuk:</strong> Liburan di pantai, wahana air, traveling, dan cinematic photography.</p>
+                    <p class="text-[11px] text-cyan-400 font-semibold">Vibe: Sinematik, profesional, dan tajam.</p>
+                </div>
+
+                <!-- 10 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 space-y-2 hover:border-slate-500/50 transition">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-bold text-white text-base">10. Minimalist Grey / Urban Concrete</h4>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-slate-700 text-slate-300 border border-slate-600">Monochrome</span>
+                    </div>
+                    <p class="text-xs text-slate-300"><strong>Konsep Warna:</strong> Mengurangi saturasi warna mencolok sehingga warna abu-abu, hitam, dan putih mendominasi.</p>
+                    <p class="text-xs text-slate-400"><strong>Cocok Untuk:</strong> Arsitektur modern, gedung perkotaan, streetwear, dan street photography.</p>
+                    <p class="text-[11px] text-slate-300 font-semibold">Vibe: Monokrom modern, tegas, dan minimalis.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BOTTOM NAV BUTTONS -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-slate-800">
+            <a href="produk1.html" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700 transition flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Produk 01
+            </a>
+            <a href="produk3.html" class="px-6 py-3 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs shadow-lg transition flex items-center gap-2">
+                Lanjut ke Produk 03: UI/UX & Web <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center text-white font-bold text-xs">
+                    DK
+                </div>
+                <p class="text-xs text-slate-400">&copy; 2026 Mata Pelajaran Pilihan Digital Kreatif. All rights reserved.</p>
+            </div>
+            <div class="flex items-center space-x-6 text-xs text-slate-400">
+                <a href="dashboard.html" class="hover:text-white transition">Dashboard</a>
+                <a href="siswa.html" class="hover:text-white transition">Siswa</a>
+                <a href="nilai.html" class="hover:text-white transition">Nilai</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
