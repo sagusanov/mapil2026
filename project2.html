@@ -1,1 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 02: Panduan Video Promosi TikTok - Digital Kreatif</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+        }
+        .tiktok-badge {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 font-sans text-slate-100 min-h-screen flex flex-col selection:bg-pink-500 selection:text-white">
 
+    <!-- Top Decorative Gradient Glow -->
+    <div class="absolute top-0 left-0 w-full h-96 gradient-bg opacity-25 blur-3xl pointer-events-none -z-10"></div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="dashboard.html" class="w-12 h-12 rounded-2xl gradient-bg flex items-center justify-center shadow-lg shadow-indigo-500/30 hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-palette text-white text-xl"></i>
+                </a>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                        Digital Kreatif <span class="text-xs px-2.5 py-1 rounded-full bg-pink-500/20 text-pink-400 border border-pink-500/30 font-semibold">Project 02</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">Panduan Video Promosi TikTok & CapCut</p>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-2">
+                <a href="dashboard.html" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-house-chimney mr-2"></i>Dashboard
+                </a>
+                <a href="siswa.html" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-user-graduate mr-2 text-emerald-400"></i>Data Siswa
+                </a>
+                <a href="nilai.html" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-chart-line mr-2 text-amber-400"></i>Nilai & Penilaian
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <div class="text-right hidden sm:block">
+                    <p class="text-sm font-bold text-white">Kelas XII</p>
+                    <p class="text-xs text-slate-400">Tahun Ajaran Aktif</p>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center font-bold text-white shadow-md">
+                    DK
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+        <!-- Breadcrumb -->
+        <nav class="flex items-center space-x-2 text-xs text-slate-400">
+            <a href="dashboard.html" class="hover:text-white transition">Dashboard</a>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            <span class="text-slate-200">Project 02</span>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            <span class="text-pink-400 font-semibold">Panduan Video Promosi TikTok</span>
+        </nav>
+
+        <!-- PAGE HEADER BANNER -->
+        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 p-8 shadow-2xl shadow-pink-900/40">
+            <div class="absolute -right-8 -bottom-8 opacity-15 pointer-events-none text-9xl text-white">
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+            <div class="relative z-10 space-y-3 max-w-3xl">
+                <div class="flex items-center gap-2">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white backdrop-blur-md">
+                        <i class="fa-solid fa-clapperboard mr-1"></i> Project 02 Utama
+                    </span>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-black/30 text-cyan-300 border border-cyan-500/30">
+                        TikTok Content Marketing
+                    </span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                    Campaign Video Promosi TikTok & CapCut untuk Produk Wallpaper Digital
+                </h2>
+                <p class="text-pink-100 text-sm leading-relaxed">
+                    Membuat video promosi TikTok yang menarik sangat bergantung pada visual yang estetis dan transisi yang mulus. Pelajari langkah demi langkah mulai dari menyusun skenario berbasis AI hingga proses editing profesional di CapCut agar tembus FYP.
+                </p>
+            </div>
+        </section>
+
+        <!-- DASHBOARD OVERVIEW STEPS -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <a href="#langkah1" class="bg-slate-800/60 border border-slate-700/80 hover:border-pink-500/50 rounded-2xl p-4 text-center space-y-2 transition group">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-pink-500/20 text-pink-400 group-hover:scale-110 transition-transform flex items-center justify-center font-bold text-sm">1</div>
+                <p class="text-xs font-bold text-white">Skenario AI & Script</p>
+            </a>
+            <a href="#langkah2" class="bg-slate-800/60 border border-slate-700/80 hover:border-indigo-500/50 rounded-2xl p-4 text-center space-y-2 transition group">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-indigo-500/20 text-indigo-400 group-hover:scale-110 transition-transform flex items-center justify-center font-bold text-sm">2</div>
+                <p class="text-xs font-bold text-white">Menyiapkan Bahan</p>
+            </a>
+            <a href="#langkah3" class="bg-slate-800/60 border border-slate-700/80 hover:border-cyan-500/50 rounded-2xl p-4 text-center space-y-2 transition group">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-cyan-500/20 text-cyan-400 group-hover:scale-110 transition-transform flex items-center justify-center font-bold text-sm">3</div>
+                <p class="text-xs font-bold text-white">Editing CapCut</p>
+            </a>
+            <a href="#langkah4" class="bg-slate-800/60 border border-slate-700/80 hover:border-emerald-500/50 rounded-2xl p-4 text-center space-y-2 transition group">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-emerald-500/20 text-emerald-400 group-hover:scale-110 transition-transform flex items-center justify-center font-bold text-sm">4</div>
+                <p class="text-xs font-bold text-white">Tips Upload FYP</p>
+            </a>
+        </div>
+
+        <!-- MAIN STEPS SECTION -->
+        <div class="space-y-8">
+
+            <!-- LANGKAH 1 -->
+            <section id="langkah1" class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-700/80 pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-2xl bg-pink-600 text-white font-black flex items-center justify-center text-lg shadow">1</span>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Langkah 1: Membuat Skenario Video Menggunakan AI</h3>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30 hidden sm:inline-block">Storyboard & Script</span>
+                </div>
+
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    Anda bisa menggunakan AI seperti ChatGPT atau Claude untuk merancang skenario (script/storyboard) pendek berdurasi 15–30 detik yang sedang tren di TikTok.
+                </p>
+
+                <!-- Prompt Box -->
+                <div class="space-y-2">
+                    <label class="text-xs font-bold text-pink-400"><i class="fa-solid fa-terminal mr-1"></i> Contoh Prompt (Perintah) untuk AI:</label>
+                    <div class="bg-slate-900 border border-slate-700 rounded-2xl p-4 font-mono text-xs text-slate-300 selection:bg-pink-500">
+                        "Buatkan skenario video TikTok berdurasi 20 detik untuk mempromosikan produk digital Wallpaper HD Aesthetic untuk HP dan Laptop. Target penontonnya adalah Gen Z dan pekerja muda yang suka meja kerjanya rapi dan estetik. Formatnya: Hook (0-3 detik), Masalah/Solusi (3-10 detik), Showcase Produk (10-20 detik), dan Call to Action/CTA. Berikan juga ide visual dan teks di layar."
+                    </div>
+                </div>
+
+                <!-- Hasil Skenario Contoh -->
+                <div class="space-y-3 pt-2">
+                    <h4 class="font-bold text-white text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-file-lines text-indigo-400"></i> Hasil Skenario Contoh (Struktur 20 Detik):
+                    </h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-slate-900/80 border border-slate-700/70 p-4 rounded-2xl space-y-2">
+                            <span class="px-2.5 py-0.5 rounded text-[10px] font-bold bg-indigo-500/20 text-indigo-300">00:00 – 00:03 (Hook)</span>
+                            <p class="text-xs text-slate-300"><strong>Visual:</strong> Tampilan layar HP atau Laptop yang membosankan (default bawaan pabrik).</p>
+                            <p class="text-xs text-pink-400 font-mono">Teks: "Bosen sama tampilan HP/Laptop gitu-gitu aja? 🥱"</p>
+                        </div>
+
+                        <div class="bg-slate-900/80 border border-slate-700/70 p-4 rounded-2xl space-y-2">
+                            <span class="px-2.5 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300">00:03 – 00:10 (Solusi / Transformasi)</span>
+                            <p class="text-xs text-slate-300"><strong>Visual:</strong> Transisi cepat (wipe/zoom) berubah menjadi wallpaper HD 4K yang sangat jernih, estetik, dan rapi.</p>
+                            <p class="text-xs text-pink-400 font-mono">Teks: "Ubah jadi seestetik ini cuma dalam 1 detik! ✨"</p>
+                        </div>
+
+                        <div class="bg-slate-900/80 border border-slate-700/70 p-4 rounded-2xl space-y-2">
+                            <span class="px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300">00:10 – 00:18 (Showcase Detail)</span>
+                            <p class="text-xs text-slate-300"><strong>Visual:</strong> Menampilkan beberapa pilihan tema wallpaper (Minimalist, Cyberpunk, Nature) bergantian dengan mulus.</p>
+                            <p class="text-xs text-pink-400 font-mono">Teks: "High Quality 4K • Cocok untuk HP & Laptop • Link di Bio/Komentar!"</p>
+                        </div>
+
+                        <div class="bg-slate-900/80 border border-slate-700/70 p-4 rounded-2xl space-y-2">
+                            <span class="px-2.5 py-0.5 rounded text-[10px] font-bold bg-rose-500/20 text-rose-300">00:18 – 00:20 (CTA)</span>
+                            <p class="text-xs text-slate-300"><strong>Visual:</strong> Teks penutup toko dan ajakan checkout.</p>
+                            <p class="text-xs text-pink-400 font-mono">Teks: "Yuk checkout sekarang! Cek keranjang kuning 🛒"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LANGKAH 2 -->
+            <section id="langkah2" class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-700/80 pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-2xl bg-indigo-600 text-white font-black flex items-center justify-center text-lg shadow">2</span>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Langkah 2: Menyiapkan Bahan Video (Assets)</h3>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 hidden sm:inline-block">Koleksi Media</span>
+                </div>
+
+                <p class="text-xs text-slate-300">Sebelum masuk ke aplikasi CapCut, kumpulkan bahan-bahan pendukung berikut:</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">1. Layar HP & Laptop</h4>
+                        <p class="text-xs text-slate-400">Rekaman layar (screen recording) saat mengubah wallpaper atau foto mockup hasil wallpaper Anda.</p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">2. File Wallpaper HD</h4>
+                        <p class="text-xs text-slate-400">Siapkan 3–5 gambar wallpaper terbaik resolusi tinggi yang ingin dipamerkan dalam video.</p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-music"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">3. Backsound (Musik)</h4>
+                        <p class="text-xs text-slate-400">Pilih musik tren/viral yang chill, lofi, atau aesthetic beat yang populer di TikTok.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LANGKAH 3 -->
+            <section id="langkah3" class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-700/80 pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-2xl bg-cyan-600 text-white font-black flex items-center justify-center text-lg shadow">3</span>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Langkah 3: Editing Video dengan CapCut (HP / PC)</h3>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 hidden sm:inline-block">Video Editor</span>
+                </div>
+
+                <p class="text-xs text-slate-300">CapCut memiliki fitur transisi dan auto-sync musik yang sangat pas untuk video promosi singkat. Ikuti 7 tahapan editing berikut:</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 font-extrabold flex items-center justify-center text-xs border border-cyan-500/30">1</span>
+                        <h4 class="font-bold text-white text-sm">Buat Proyek & Rasio 9:16</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Buka CapCut, klik <strong>Proyek Baru</strong>. Masukkan semua foto/video mockup wallpaper. Ubah Rasio (Aspect Ratio) ke <strong>9:16</strong> (format vertikal layar penuh TikTok).</p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 font-extrabold flex items-center justify-center text-xs border border-cyan-500/30">2</span>
+                        <h4 class="font-bold text-white text-sm">Potong Klip (Pacing Cepat)</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Potong durasi klip pendek-pendek (sekitar 1,5 – 2 detik per klip) agar ritmenya cepat dan penonton tidak bosan. Susun dari tampilan biasa ke aesthetic.</p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 font-extrabold flex items-center justify-center text-xs border border-cyan-500/30">3</span>
+                        <h4 class="font-bold text-white text-sm">Tambahkan Transisi Tren</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Ketuk garis putih antar klip. Pilih transisi halus seperti <strong>Camera (Pull In / Zoom Out)</strong> atau <strong>Blur/Dissolve</strong> untuk konsistensi.</p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 font-extrabold flex items-center justify-center text-xs border border-cyan-500/30">4</span>
+                        <h4 class="font-bold text-white text-sm">Masukkan Teks (Caption)</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Pilih <strong>Teks &gt; Tambahkan Teks</strong>. Gunakan font bersih (Montserrat/Bold warna putih dengan latar hitam tipis). Beri animasi masuk <em>Typewriter</em> atau <em>Fade</em>.</p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 font-extrabold flex items-center justify-center text-xs border border-cyan-500/30">5</span>
+                        <h4 class="font-bold text-white text-sm">Efek Visual (Kesan HD)</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Pilih <strong>Efek &gt; Efek Video</strong>. Cari kategori Night atau Lensa yang memberikan kilau (<em>Sparkle, Edge Glow, atau Smart Sharpen</em>) agar wallpaper terlihat tajam.</p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 font-extrabold flex items-center justify-center text-xs border border-cyan-500/30">6 & 7</span>
+                        <h4 class="font-bold text-white text-sm">Sinkronisasi Musik & Ekspor</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Sesuaikan pergantian gambar dengan ketukan bass musik (beat-sync). Atur resolusi ekspor ke <strong>1080p, 60fps</strong> agar kualitas gambar tidak pecah.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LANGKAH 4 -->
+            <section id="langkah4" class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-700/80 pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-2xl bg-emerald-600 text-white font-black flex items-center justify-center text-lg shadow">4</span>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Langkah 4: Tips Upload ke TikTok Agar FYP</h3>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 hidden sm:inline-block">Strategi Publikasi</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">1. Gunakan Audio Trending</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Pasang musik yang sedang naik daun di TikTok, tetapi kecilkan volumenya ke angka 5% - 10% (hanya sebagai latar pendukung agar algoritma merekomendasikan video Anda).
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-hashtag"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">2. Caption & Hashtag Relevan</h4>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><strong>Caption:</strong> "Rekomendasi wallpaper HD aesthetic buat kalian yang bosenan! Biar makin semangat kerja/belajar. 💻📱✨"</p>
+                            <p class="text-pink-400 font-mono">#wallpaperhd #wallpaperaesthetic #wallpaperlaptop #wallpaperhp #shopeefindsaesthetic #produksdigital</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">3. Sematkan Tautan Toko</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Pastikan produk Shopee Anda sudah ditautkan pada <strong>Yellow Basket (TikTok Shop)</strong> atau letakkan tautan toko digital Anda pada bio profil TikTok.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- BOTTOM NAV BUTTONS -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-slate-800">
+            <a href="project1.html" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700 transition flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Project 01
+            </a>
+            <a href="project3.html" class="px-6 py-3 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold text-xs shadow-lg transition flex items-center gap-2">
+                Lanjut ke Project 03: Web Portfolio <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center text-white font-bold text-xs">
+                    DK
+                </div>
+                <p class="text-xs text-slate-400">&copy; 2026 Mata Pelajaran Pilihan Digital Kreatif. All rights reserved.</p>
+            </div>
+            <div class="flex items-center space-x-6 text-xs text-slate-400">
+                <a href="dashboard.html" class="hover:text-white transition">Dashboard</a>
+                <a href="siswa.html" class="hover:text-white transition">Siswa</a>
+                <a href="nilai.html" class="hover:text-white transition">Nilai</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
