@@ -1,1 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 01: Panduan Membuka Toko Shopee Digital - Digital Kreatif</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+        }
+        .shopee-badge {
+            background: linear-gradient(135deg, #ee4d2d 0%, #ff7337 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 font-sans text-slate-100 min-h-screen flex flex-col selection:bg-pink-500 selection:text-white">
 
+    <!-- Top Decorative Gradient Glow -->
+    <div class="absolute top-0 left-0 w-full h-96 gradient-bg opacity-25 blur-3xl pointer-events-none -z-10"></div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="dashboard.html" class="w-12 h-12 rounded-2xl gradient-bg flex items-center justify-center shadow-lg shadow-indigo-500/30 hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-palette text-white text-xl"></i>
+                </a>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                        Digital Kreatif <span class="text-xs px-2.5 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-semibold">Project 01</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">Panduan Praktik Membuka Toko Digital Shopee</p>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-2">
+                <a href="dashboard.html" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-house-chimney mr-2"></i>Dashboard
+                </a>
+                <a href="siswa.html" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-user-graduate mr-2 text-emerald-400"></i>Data Siswa
+                </a>
+                <a href="nilai.html" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-chart-line mr-2 text-amber-400"></i>Nilai & Penilaian
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <div class="text-right hidden sm:block">
+                    <p class="text-sm font-bold text-white">Kelas XII</p>
+                    <p class="text-xs text-slate-400">Tahun Ajaran Aktif</p>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-white shadow-md">
+                    DK
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+        <!-- Breadcrumb -->
+        <nav class="flex items-center space-x-2 text-xs text-slate-400">
+            <a href="dashboard.html" class="hover:text-white transition">Dashboard</a>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            <span class="text-slate-200">Project 01</span>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            <span class="text-indigo-400 font-semibold">Panduan Praktik Toko Shopee</span>
+        </nav>
+
+        <!-- PAGE HEADER BANNER -->
+        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-orange-600 via-rose-600 to-indigo-600 p-8 shadow-2xl shadow-orange-900/40">
+            <div class="absolute -right-8 -bottom-8 opacity-15 pointer-events-none text-9xl text-white">
+                <i class="fa-solid fa-store"></i>
+            </div>
+            <div class="relative z-10 space-y-3 max-w-3xl">
+                <div class="flex items-center gap-2">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white backdrop-blur-md">
+                        <i class="fa-solid fa-rocket mr-1"></i> Project Kolaborasi & Mandiri
+                    </span>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold shopee-badge text-white shadow">
+                        Shopee Seller Setup
+                    </span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                    Inovasi Brand Lokal: Panduan Pendirian & Peluncuran Toko Digital di Shopee
+                </h2>
+                <p class="text-orange-100 text-sm leading-relaxed">
+                    Panduan langkah demi langkah bagi siswa untuk mendaftar akun penjual, mengonfigurasi profil toko, mendekorasi etalase visual, mengunggah produk wallpaper digital pertama, hingga mengelola pengiriman file pesanan secara profesional.
+                </p>
+            </div>
+        </section>
+
+        <!-- DASHBOARD OVERVIEW STEPS -->
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-4">
+            <a href="#langkah1" class="bg-slate-800/60 border border-slate-700/80 hover:border-orange-500/50 rounded-2xl p-4 text-center space-y-2 transition group">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-orange-500/20 text-orange-400 group-hover:scale-110 transition-transform flex items-center justify-center font-bold text-sm">1</div>
+                <p class="text-xs font-bold text-white">Pendaftaran Toko</p>
+            </a>
+            <a href="#langkah2" class="bg-slate-800/60 border border-slate-700/80 hover:border-indigo-500/50 rounded-2xl p-4 text-center space-y-2 transition group">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-indigo-500/20 text-indigo-400 group-hover:scale-110 transition-transform flex items-center justify-center font-bold text-sm">2</div>
+                <p class="text-xs font-bold text-white">Pengaturan Dasar</p>
+            </a>
+            <a href="#langkah3" class="bg-slate-800/60 border border-slate-700/80 hover:border-pink-500/50 rounded-2xl p-4 text-center space-y-2 transition group">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-pink-500/20 text-pink-400 group-hover:scale-110 transition-transform flex items-center justify-center font-bold text-sm">3</div>
+                <p class="text-xs font-bold text-white">Dekorasi Toko</p>
+            </a>
+            <a href="#langkah4" class="bg-slate-800/60 border border-slate-700/80 hover:border-emerald-500/50 rounded-2xl p-4 text-center space-y-2 transition group">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-emerald-500/20 text-emerald-400 group-hover:scale-110 transition-transform flex items-center justify-center font-bold text-sm">4</div>
+                <p class="text-xs font-bold text-white">Upload Produk</p>
+            </a>
+            <a href="#langkah5" class="bg-slate-800/60 border border-slate-700/80 hover:border-amber-500/50 rounded-2xl p-4 text-center space-y-2 transition group col-span-2 sm:col-span-1">
+                <div class="w-10 h-10 mx-auto rounded-xl bg-amber-500/20 text-amber-400 group-hover:scale-110 transition-transform flex items-center justify-center font-bold text-sm">5</div>
+                <p class="text-xs font-bold text-white">Kelola Pesanan</p>
+            </a>
+        </div>
+
+        <!-- MAIN STEPS SECTION -->
+        <div class="space-y-8">
+
+            <!-- LANGKAH 1 -->
+            <section id="langkah1" class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-700/80 pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-2xl shopee-badge text-white font-black flex items-center justify-center text-lg shadow">1</span>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Langkah 1: Membuat Akun & Pendaftaran Toko Shopee</h3>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 border border-orange-500/30 hidden sm:inline-block">Registrasi Penjual</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">1. Daftar Akun Shopee</h4>
+                        <ul class="text-xs text-slate-300 space-y-2 list-disc pl-4">
+                            <li>Buka aplikasi Shopee di HP atau akses situs <a href="https://shopee.co.id" target="_blank" class="text-orange-400 hover:underline">shopee.co.id</a>.</li>
+                            <li>Klik <strong>Daftar</strong>, lalu masukkan nomor HP aktif atau daftar menggunakan akun Google/Facebook.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">2. Akses Shopee Seller Centre</h4>
+                        <ul class="text-xs text-slate-300 space-y-2 list-disc pl-4">
+                            <li>Buka browser di laptop/PC dan masuk ke portal <a href="https://seller.shopee.co.id" target="_blank" class="text-blue-400 hover:underline">seller.shopee.co.id</a>.</li>
+                            <li>Login menggunakan akun Shopee yang baru saja dibuat.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">3. Mulai Pendaftaran Toko</h4>
+                        <ul class="text-xs text-slate-300 space-y-2 list-disc pl-4">
+                            <li>Klik menu <strong>Mulai Jualan / Registrasi Penjual</strong>.</li>
+                            <li><strong>Jenis Penjual:</strong> Pilih Perorangan (Individu).</li>
+                            <li><strong>Verifikasi KTP:</strong> Unggah foto KTP & foto selfie memegang KTP.</li>
+                            <li><strong>Alamat Toko:</strong> Isi alamat lengkap pengiriman/rumah Anda.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LANGKAH 2 -->
+            <section id="langkah2" class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-700/80 pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-2xl bg-indigo-600 text-white font-black flex items-center justify-center text-lg shadow">2</span>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Langkah 2: Pengaturan Dasar Toko (Setting Toko)</h3>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 hidden sm:inline-block">Konfigurasi Seller Centre</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- A -->
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-white text-sm flex items-center gap-2">
+                                <i class="fa-solid fa-store text-indigo-400"></i> A. Profil Toko
+                            </h4>
+                            <span class="text-[10px] bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded">Identitas</span>
+                        </div>
+                        <ul class="text-xs text-slate-300 space-y-2 list-disc pl-4">
+                            <li><strong>Nama Toko:</strong> Buat nama yang mudah diingat & relevan (contoh: <code>PixelArt Wallpaper Studio</code> atau <code>Aesthetic Wallpapers Official</code>).</li>
+                            <li><strong>Logo Toko:</strong> Unggah logo berukuran 1:1 (rekomendasi 1080 x 1080 px).</li>
+                            <li><strong>Deskripsi Toko:</strong> Tulis jenis produk digital, jam operasional, dan keunggulan karya.</li>
+                        </ul>
+                    </div>
+
+                    <!-- B -->
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-white text-sm flex items-center gap-2">
+                                <i class="fa-solid fa-truck-fast text-emerald-400"></i> B. Alamat & Kurir
+                            </h4>
+                            <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded">Pengiriman</span>
+                        </div>
+                        <ul class="text-xs text-slate-300 space-y-2 list-disc pl-4">
+                            <li>Pastikan <strong>Alamat Utama</strong> & <strong>Alamat Pengembalian</strong> sudah aktif.</li>
+                            <li>Buka menu <strong>Jasa Kirim Saya</strong>.</li>
+                            <li>Aktifkan kurir reguler (J&T Express, Shopee Express, Anteraja, atau SiCepat) untuk formalitas pengiriman resi.</li>
+                        </ul>
+                    </div>
+
+                    <!-- C -->
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-white text-sm flex items-center gap-2">
+                                <i class="fa-solid fa-building-columns text-amber-400"></i> C. Rekening Bank
+                            </h4>
+                            <span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded">Keuangan</span>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Buka menu <strong>Rekening Bank</strong> di Seller Centre, lalu masukkan detail rekening bank atau akun dompet digital (E-Wallet) Anda untuk penarikan saldo hasil penjualan produk wallpaper digital.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LANGKAH 3 -->
+            <section id="langkah3" class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-700/80 pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-2xl bg-pink-600 text-white font-black flex items-center justify-center text-lg shadow">3</span>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Langkah 3: Memasang Wallpaper & Dekorasi Toko</h3>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30 hidden sm:inline-block">Desain Etalase Visual</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">01</div>
+                        <h4 class="font-bold text-white text-sm">Akses Dekorasi</h4>
+                        <p class="text-xs text-slate-400">Di Seller Centre, pilih menu <strong>Toko &gt; Dekorasi Toko</strong>, lalu klik <strong>Ubah Dekorasi</strong>.</p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">02</div>
+                        <h4 class="font-bold text-white text-sm">Banner Header</h4>
+                        <p class="text-xs text-slate-400">Unggah Spanduk Toko rasio 2:1 (1200 x 600 px). Tampilkan koleksi terbaik, ucapan Selamat Datang, dan keunggulan produk (4K UHD, Fast Delivery).</p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">03</div>
+                        <h4 class="font-bold text-white text-sm">Tambah Komponen</h4>
+                        <p class="text-xs text-slate-400">Gunakan Banner Komedi (Carousel) untuk beberapa tema sekaligus, serta pasang komponen Produk Pilihan / Best Seller.</p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">04</div>
+                        <h4 class="font-bold text-white text-sm">Publish Store</h4>
+                        <p class="text-xs text-slate-400">Klik <strong>Pratinjau (Preview)</strong> untuk mengecek tampilan di layar HP pembeli, lalu klik <strong>Tampilkan (Publish)</strong>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LANGKAH 4 -->
+            <section id="langkah4" class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-700/80 pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-2xl bg-emerald-600 text-white font-black flex items-center justify-center text-lg shadow">4</span>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Langkah 4: Cara Upload Produk Pertama</h3>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 hidden sm:inline-block">Katalog Produk Digital</span>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                            <h4 class="font-bold text-white text-sm text-emerald-400">1. Tambah Produk & Judul SEO</h4>
+                            <p class="text-xs text-slate-300">Pilih <strong>Produk &gt; Tambah Produk Baru</strong>.</p>
+                            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300">
+                                Contoh Judul:<br>
+                                [DIGITAL FILE] Wallpaper HD HP & Laptop Minimalist Aesthetic 4K - Background iPhone Android PC
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                            <h4 class="font-bold text-white text-sm text-emerald-400">2. Pilih Kategori yang Tepat</h4>
+                            <p class="text-xs text-slate-300">Gunakan kategori relevan agar mudah ditemukan pembeli:</p>
+                            <p class="text-xs text-slate-400 font-semibold">• Buku & Hobi &gt; Desain & Kerajinan<br>• Komputer & Aksesori &gt; Software & Produk Digital</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                            <h4 class="font-bold text-white text-sm text-emerald-400">3. Isi Deskripsi Produk</h4>
+                            <ul class="text-xs text-slate-300 space-y-1 list-disc pl-4">
+                                <li>Rasio & Resolusi (4K UHD 300 DPI).</li>
+                                <li>Format File: PNG / JPG High Quality.</li>
+                                <li>Metode Kirim: Link Google Drive via Chat/Email.</li>
+                                <li>Kompatibilitas: Android, iOS, Windows, Mac.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                            <h4 class="font-bold text-white text-sm text-emerald-400">4. Upload Foto Mockup</h4>
+                            <ul class="text-xs text-slate-300 space-y-1 list-disc pl-4">
+                                <li><strong>Thumbnail Utama:</strong> Mockup wallpaper terpasang di HP/Laptop (1:1, 1080x1080 px).</li>
+                                <li><strong>Foto Variasi:</strong> Sertakan Watermark transparan nama toko Anda.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-2">
+                            <h4 class="font-bold text-white text-sm text-emerald-400">5. Harga, Stok & Kirim</h4>
+                            <ul class="text-xs text-slate-300 space-y-1 list-disc pl-4">
+                                <li><strong>Harga:</strong> Rp5.000 – Rp15.000 / bundle.</li>
+                                <li><strong>Stok:</strong> Isi 9999 (tidak terbatas).</li>
+                                <li><strong>Berat:</strong> Minimum 100 gram.</li>
+                                <li>Klik <strong>Simpan dan Tampilkan</strong>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LANGKAH 5 -->
+            <section id="langkah5" class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-700/80 pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-2xl bg-amber-600 text-white font-black flex items-center justify-center text-lg shadow">5</span>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Langkah 5: Pengelolaan Pesanan & Pengiriman File Digital</h3>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 hidden sm:inline-block">Fulfillment & Chat</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">1. Cek Catatan Pembeli</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Setelah notifikasi pesanan masuk, periksa kolom pesan/catatan pesanan atau buka Fitur Chat Shopee untuk mengambil alamat email / kontak yang dicantumkan pembeli saat checkout.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">2. Kirim Link File Digital</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Salin (copy) tautan link folder Google Drive yang berisi file wallpaper resolusi asli (tanpa watermark). Kirimkan tautan tersebut melalui Chat Shopee atau email pembeli.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-700/70 p-5 rounded-2xl space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-box-archive"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">3. Resi & Konfirmasi Pesanan</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Kirimkan kartu ucapan terima kasih / nota cetak berisi QR code link Google Drive via kurir reguler agar status resi ter-update otomatis. Minta pembeli mengonfirmasi "Pesanan Diterima" & berikan ulasan Bintang 5.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- BOTTOM NAV BUTTONS -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-slate-800">
+            <a href="produk1.html" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700 transition flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Lihat Modul Produk 01
+            </a>
+            <a href="project2.html" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-lg transition flex items-center gap-2">
+                Lanjut ke Project 02: Video Profil <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center text-white font-bold text-xs">
+                    DK
+                </div>
+                <p class="text-xs text-slate-400">&copy; 2026 Mata Pelajaran Pilihan Digital Kreatif. All rights reserved.</p>
+            </div>
+            <div class="flex items-center space-x-6 text-xs text-slate-400">
+                <a href="dashboard.html" class="hover:text-white transition">Dashboard</a>
+                <a href="siswa.html" class="hover:text-white transition">Siswa</a>
+                <a href="nilai.html" class="hover:text-white transition">Nilai</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
